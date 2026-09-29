@@ -1,0 +1,88 @@
+/*---------------------------
+   JIGSAW.RC resource script
+  ---------------------------*/
+
+#define INCL_PM
+#include <os2.h>
+#include "jigsaw.h"
+
+POINTER ID_RESOURCE jigsaw.ico
+
+MENU ID_RESOURCE
+     {
+     SUBMENU  "~Game",                          IDM_SUBMENU_GAME
+          {
+          MENUITEM "~Load Bitmap\tCtrl+N",       IDM_LOAD
+          MENUITEM "~Jumble\tCtrl+J",             IDM_JUMBLE
+          MENUITEM SEPARATOR
+          MENUITEM "E~xit\tCtrl+X",              IDM_EXIT
+          }
+     SUBMENU  "~Options",                       IDM_SUBMENU_OPTIONS
+          {
+          MENUITEM "Zoom ~In\tCtrl++",             IDM_ZOOMIN
+          MENUITEM "Zoom ~Out\tCtrl+-",           IDM_ZOOMOUT
+          MENUITEM SEPARATOR
+          SUBMENU  "~Language",                  IDM_SUBMENU_LANG
+               {
+               MENUITEM "English",               IDM_LANG_EN, MIA_CHECKED
+               MENUITEM "Espanol",               IDM_LANG_ES
+               MENUITEM "Nederlands",            IDM_LANG_NL
+               MENUITEM "Deutsch",               IDM_LANG_DE
+               MENUITEM "Francais",              IDM_LANG_FR
+               MENUITEM "Italiano",              IDM_LANG_IT
+               }
+          MENUITEM SEPARATOR
+          MENUITEM "~Frame Controls\tCtrl+F",    IDM_FRAME
+          MENUITEM SEPARATOR
+          MENUITEM "~Save settings on exit",     IDM_SAVEONEXIT
+          }
+     SUBMENU  "~Help",                          IDM_SUBMENU_HELP
+          {
+          MENUITEM "~About...",                  IDM_ABOUT
+          }
+     }
+
+ACCELTABLE ID_RESOURCE
+     {
+     "n",  IDM_LOAD,    CONTROL
+     "N",  IDM_LOAD,    CONTROL
+     "j",  IDM_JUMBLE,  CONTROL
+     "J",  IDM_JUMBLE,  CONTROL
+     "x",  IDM_EXIT,    CONTROL
+     "X",  IDM_EXIT,    CONTROL
+     "+",  IDM_ZOOMIN,  CONTROL
+     "=",  IDM_ZOOMIN,  CONTROL
+     "-",  IDM_ZOOMOUT, CONTROL
+     "f",  IDM_FRAME,   CONTROL
+     "F",  IDM_FRAME,   CONTROL
+     }
+
+DLGTEMPLATE IDD_ABOUT
+     {
+     DIALOG "About Jigsaw", 0, 32, 24, 240, 110,, FCF_TITLEBAR|FCF_DLGBORDER
+          {
+          CTEXT "Jigsaw for OS/2",                   -1, 10, 88, 220, 8
+          CTEXT "Version 1.1",                        -1, 10, 76, 220, 8
+          CTEXT "OpenWatcom Release",                 -1, 10, 64, 220, 8
+          CTEXT "(c) 1988, Microsoft Corporation",   -1, 10, 52, 220, 8
+          CTEXT "(c) 2026, OS2World",                 -1, 10, 40, 220, 8
+          CTEXT "BSD 3-Clause License",               -1, 10, 28, 220, 8
+          DEFPUSHBUTTON "Close" DID_OK,              98, 10, 44, 14, WS_GROUP
+          }
+     }
+
+DLGTEMPLATE IDD_CONFIRM
+     {
+     DIALOG "", 0, 32, 32, 220, 60,, FCF_TITLEBAR|FCF_DLGBORDER
+          {
+          CTEXT "",   IDC_CONFIRM_MSG, 10, 36, 200, 12
+          DEFPUSHBUTTON "Yes", IDC_YES,  55, 10, 44, 14, WS_GROUP
+          PUSHBUTTON    "No",  IDC_NO,  115, 10, 44, 14
+          }
+     }
+
+STRINGTABLE
+     {
+     IDS_TITLE       "Jigsaw"
+     IDS_TERMINATE   "OK to exit Jigsaw ?"
+     }

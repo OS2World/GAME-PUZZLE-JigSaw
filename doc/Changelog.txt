@@ -1,0 +1,29 @@
+JIGSAW Changelog
+================
+
+v1.1 -- 2026-09-29
+-------------------
+- Added keyboard shortcuts: Ctrl+J (Jumble), Ctrl++ (Zoom In),
+  Ctrl+- (Zoom Out); Ctrl+N/X/F already present
+- Shortcut hints shown in menu items (e.g. "Jumble  Ctrl+J")
+- Shortcut hints persist when language is switched at runtime
+- License changed to BSD 3-Clause for the 32-bit port
+
+v1.0 -- 2026-09-29
+-------------------
+- 32-bit OS/2 PM port (OpenWatcom 2.0) of the original
+  1988 Microsoft 16-bit sample
+- Replaced 16-bit API calls with 32-bit equivalents:
+    DosAllocMem / DosFreeMem (was DosAllocSeg / DosFreeSeg)
+    DosCreateThread 5-arg form
+    DosQueryFileInfo + FILESTATUS3
+    WinFileDlg / FILEDLG for file open dialog
+    Single DosRead replacing huge-segment loop
+- Removed FAR, K&R prototypes, lstrcpy/lstrcat, SELECTOROF/OFFSETOF
+- Replaced RAM semaphores with volatile BOOL flags
+- Added 6-language runtime switching (EN/ES/NL/DE/FR/IT)
+- Added Frame Controls toggle (hide/show scrollbars and menu)
+- Added Save Settings on Exit (jigsaw.cfg persistence)
+- Added About dialog
+- Window opens 1024x768 centered
+- BLDLEVEL embedded version string

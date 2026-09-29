@@ -1,0 +1,7 @@
+bin/*.exe
+*.obj
+*.res
+*.map
+*.dll
+*.log
+*.cfg
