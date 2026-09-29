@@ -3,6 +3,8 @@
 Jigsaw puzzle game for OS/2 PM -- 32-bit port, Version 1.1.  
 Illustrates the use of GPI retained segments, async drawing threads, and bitmap manipulation.
 
+![JigSaw](/doc/JigSaw.png)
+
 The original 16-bit source was written by Microsoft and included in the OS/2 1.x and 2.0 Toolkits.
 
 ## Features
