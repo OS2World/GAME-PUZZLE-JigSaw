@@ -64,7 +64,5 @@ See `doc\LICENSE.txt` for full text.
 - OS2World (32-bit port, 2026)
 
 ## Links
-
-- https://hobbes.nmsu.edu/h-viewer.php?dir=/pub/os2/games&file=jigsaw.zip
 - [DEV-SAMPLES-C-PM-Jigsaw](https://github.com/os2World/DEV-SAMPLES-C-PM-Jigsaw)
 - https://github.com/OS2World/DEV-SAMPLES-IBM_OS2_2-0_Toolkit
